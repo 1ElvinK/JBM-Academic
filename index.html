@@ -94,6 +94,30 @@
         <button class="back-btn" onclick="showView('dash')"style="margin-bottom: 20px;">Back to Dashboard</button>
 
         <div class="weekly-update">
+            <h3 style="color: var(--accent);">Session 2 (21 April)</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Tqjkg3Mab9g" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="quiz-card">
+                <p>1. How can I apply what I've seen in the video to help my student become less distracted?</p>
+                <div class="quiz-options">
+                    <input type="radio" name="q-w2" id="w2-optA">
+                    <label for="w2-optA">I will offer him a break everytime he is distracted.</label>
+                    
+                    <input type="radio" name="q-w2" id="w2-optC">
+                    <label for="w2-optC">I will use positive reinforcement to get my student to focus.</label>
+
+                    <input type="radio" name="q-w2" id="w2-correct">
+                    <label for="w2-correct">I will come up with a plan at the beginning of the session.</label>
+                </div>
+                <button onclick="checkQuiz('w2-correct', 'w2-msg')">Check Answer</button>
+                <p id="w2-msg" style="text-align:center; font-weight:bold;"></p>
+            </div>
+        </div>
+        
+        
+        <div class="weekly-update old-week">
             <h3 style="color: var(--accent);">Session 1 (14 April)</h3>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/WBGPQIukC-A" frameborder="0" allowfullscreen></iframe>
