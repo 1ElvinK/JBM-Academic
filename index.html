@@ -93,7 +93,31 @@
         
         <button class="back-btn" onclick="showView('dash')"style="margin-bottom: 20px;">Back to Dashboard</button>
 
-        <div class="weekly-update">
+
+
+<div class="weekly-update">
+            <h3 style="color: var(--accent);">Session 3 (28 April)</h3>
+            <p>How do I facilitate a conversation or discussion? This is an important skill not only for dialogues, but also the socio-emotional learning of our students. Read the following extract on CSI.</p>
+            <img src="images/IMG_6681.jpg" alt="Wu-pope, J. (2020). Singapore’s Approach to Global Competence Development. The Language Educator. Retrieved from https://www.thelanguageeducator.org/actfl/summer_2020/ " width="100%">
+            <div class="quiz-card">
+                <p>1. If a facilitator focuses only on "Influence" without "Clarifying" the issue first, what is the most likely result for the audience? </p>
+                <div class="quiz-options">
+                    <input type="radio" name="q-w2" id="w2-optA">
+                    <label for="w2-optA">They will be deeply moved and take long-term action.</label>
+                    
+                    <input type="radio" name="q-w2" id="w2-optC">
+                    <label for="w2-optC">They will have too much information and feel overwhelmed.</label>
+
+                    <input type="radio" name="q-w2" id="w2-correct">
+                    <label for="w2-correct">They will be confused about why the requested action is necessary.</label>
+                </div>
+                <button onclick="checkQuiz('w2-correct', 'w2-msg')">Check Answer</button>
+                <p id="w2-msg" style="text-align:center; font-weight:bold;"></p>
+            </div>
+        </div>
+        
+        
+        <div class="weekly-update old-week">
             <h3 style="color: var(--accent);">Session 2 (21 April)</h3>
             <div class="video-wrapper">
                 <iframe src="https://www.youtube.com/embed/Tqjkg3Mab9g" frameborder="0" allowfullscreen></iframe>
