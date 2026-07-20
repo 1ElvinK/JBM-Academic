@@ -196,10 +196,9 @@
             alert("Attendance Recorded!");
             e.target.reset();
             showView('dash');
-        } catch (e) {
-            alert("Error saving data.");
-        }
-        btn.innerText = "Submit Attendance";
+        } catch (error) {
+            alert(`Error saving data.\nError message: ${error.message}`);
+        }        btn.innerText = "Submit Attendance";
     };
 
     function checkQuiz(correctId, msgId) {
