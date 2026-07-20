@@ -198,7 +198,9 @@
             showView('dash');
         } catch (error) {
             alert(`Error saving data.\nError message: ${error.message}`);
-        }        btn.innerText = "Submit Attendance";
+        } finally {
+            btn.innerText = "Submit Attendance";
+        }
     };
 
     function checkQuiz(correctId, msgId) {
