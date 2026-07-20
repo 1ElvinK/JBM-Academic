@@ -181,12 +181,26 @@
         btn.innerText = "Sending...";
         const data = Object.fromEntries(new FormData(e.target));
         try {
-            await fetch(CONFIG.API, { method: 'POST', body: JSON.stringify(data) });
+            const response = await fetch(CONFIG.API, { 
+                method: 'POST', 
+                body: JSON.stringify(data) 
+            });
+
+            if (!response.ok) {
+                const errorBody = await response.json().catch(() => ({
+                    message: "Server error occurred."
+                }))
+                throw new Error(errorBody.message || "Unknown server error")
+            }
+            
             alert("Attendance Recorded!");
             e.target.reset();
             showView('dash');
-        } catch (e) { alert("Error saving data."); }
-        btn.innerText = "Submit Attendance";
+        } catch (error) {
+            alert(`Error saving data.\nError message: ${error.message}`);
+        } finally {
+            btn.innerText = "Submit Attendance";
+        }
     };
 
     function checkQuiz(correctId, msgId) {
